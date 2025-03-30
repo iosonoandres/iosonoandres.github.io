@@ -1,0 +1,49 @@
+/* Contenitore principale */
+.hero-section {
+    /* Allineato con l’header a pillola */
+    width: 75%;          /* o 90%, come preferisci */
+    max-width: 1100px;   /* larghezza massima */
+    margin: 8rem auto 0; /* spazio dall'header fisso, in alto */
+    /* Se vuoi un background diverso:
+       background: #131313;
+       border-radius: 16px;
+       padding: 2rem;
+    */
+  }
+  
+  /* Righe flessibili */
+  .hero-row {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem; /* spazio tra le righe */
+  }
+  
+  /* Inverte l’ordine delle colonne */
+  .hero-row.inverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* Colonne */
+  .hero-text, 
+  .hero-image {
+    flex: 1;
+  }
+  
+  /* Esempio di animazione rotante */
+  .rotating {
+    animation: spin 15s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  
+  /* Responsività su mobile */
+  @media (max-width: 768px) {
+    .hero-row {
+      flex-direction: column; /* le colonne si impilano */
+      text-align: center;     /* testo centrato */
+    }
+  }

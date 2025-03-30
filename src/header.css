@@ -1,0 +1,138 @@
+
+/* INIZIO SEZIONE HEADER */
+
+/* Header più moderno */
+header {
+    background: linear-gradient(135deg, #0c0b16, #0d0a21); /* Gradiente scuro */
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    /* Nuove proprietà per la pillola fissa */
+    position: fixed;           /* Fissa in alto */
+    top: 1rem;                 /* Distanza dal bordo superiore */
+    left: 50%;                 /* Centro orizzontale */
+    transform: translateX(-50%); /* Sposta esattamente al centro */
+    width: 75%;                /* Larghezza ridotta */
+    max-width: 1100px;        /* Larghezza massima */
+    border-radius: 9999px;     /* Angoli arrotondati tipo “pillola” */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Effetto ombra */
+    z-index: 999;              /* Sopra altri elementi */
+  }
+  
+  /* Profilo o Logo a sinistra */
+  header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #ffffffc9;
+  }
+  
+  header .header-left img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Menu centrale */
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Link menu */
+  header nav ul li a {
+    color: #ffffffc9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  header nav ul li a:hover {
+    color: #ffd700; /* Un bel giallo su hover */
+  }
+  
+  /* Pulsante "Let's Connect" a destra */
+  .button-connect {
+    background-color: #8ec9ff;
+    color: #333;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px; /* forma a pillola */
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button-connect:hover {
+    background-color: #ffec99; 
+  }
+  
+  /* Effetto “elevazione” su hover del pulsante */
+  .button-connect:active {
+    transform: scale(0.95);
+  }
+  
+  /* Esempio di animazione semplice sugli elementi dell’header */
+  header nav ul li {
+    transition: transform 0.3s ease;
+  }
+  header nav ul li:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* FINE SEZIONE HEADER NORMALE INIZIO MOBILE*/
+  
+  
+  
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      flex-wrap: wrap; /* consente di andare a capo se serve */
+      align-items: center;
+      gap: 0.5rem;
+    }
+  
+    .button-connect {
+      font-size: 1rem;
+      padding: 0.4rem 1rem;
+    }
+  
+    .header-left {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header-left h2 {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    header .header-left img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  
+  /* FINE REGOLE HEADER MOBILE*/
+  
+  
+  
+  
+  

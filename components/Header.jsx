@@ -1,5 +1,6 @@
 import React from 'react';
 import profilePic from '../src/assets/IMG_6417.jpg';
+import '../src/header.css';
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
       {/* Se hai un logo o un avatar */}
       <div className="header-left">
       <img src={profilePic} alt="Profilo" />
-        <h2>ANDRES CAMACHO</h2> 
+        <h2>Andres Camacho</h2> 
         {/* Oppure un tuo nome / logo */}
       </div>
 
