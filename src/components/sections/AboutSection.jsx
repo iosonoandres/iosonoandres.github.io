@@ -8,7 +8,7 @@ const AboutSection = () => (
   <section id="about" className="content-section section-anchor" aria-label="About">
     <SectionTitle
       eyebrow="About"
-      title="Software Engineer with a Data and AI background"
+      title="Software Engineer with a Data and AI background 💻"
       description={siteContent.about.bio}
     />
 

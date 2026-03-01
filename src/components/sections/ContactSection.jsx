@@ -7,7 +7,7 @@ const ContactSection = () => (
   <section id="contact" className="content-section section-anchor" aria-label="Contact">
     <SectionTitle
       eyebrow="Contact"
-      title="Let's build something valuable"
+      title="Let's build something valuable 📈"
       description="Open to conversations about software engineering, data platforms, AI initiatives, and enterprise delivery."
     />
 

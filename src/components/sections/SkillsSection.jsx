@@ -84,7 +84,7 @@ const SkillsSection = () => {
     <section id="skills" className="content-section section-anchor" aria-label="Skills">
       <SectionTitle
         eyebrow="Skills"
-        title="Technical skills"
+        title="Technical skills 🧑🏼‍💻"
         description="Core skills across engineering, data, cloud, and delivery."
       />
 

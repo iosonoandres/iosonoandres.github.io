@@ -7,7 +7,7 @@ const TalksSection = () => (
   <section id="talks" className="content-section section-anchor" aria-label="Talks and Teaching">
     <SectionTitle
       eyebrow="Talks & Teaching"
-      title="Teaching, leadership, and recognition"
+      title="Teaching, leadership, and recognition ✏️"
       description={siteContent.talks.description}
     />
 

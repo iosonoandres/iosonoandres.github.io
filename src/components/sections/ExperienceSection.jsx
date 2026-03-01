@@ -7,7 +7,7 @@ const ExperienceSection = () => (
   <section id="experience" className="content-section section-anchor" aria-label="Experience">
     <SectionTitle
       eyebrow="Experience"
-      title="Professional journey"
+      title="Professional journey 📊"
       description="Professional experience in enterprise software and data delivery across banking and analytics contexts."
     />
     <Timeline items={siteContent.experience} />

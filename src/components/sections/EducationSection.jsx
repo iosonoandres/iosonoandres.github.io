@@ -8,7 +8,7 @@ const EducationSection = () => {
 
   return (
     <section id="education" className="content-section section-anchor" aria-label="Education">
-      <SectionTitle eyebrow="Education" title="Academic background" description={education.description} />
+      <SectionTitle eyebrow="Education" title="Academic background 👨🏼‍🎓" description={education.description} />
 
       <GlowCard className="education-card">
         <h3>{education.institution}</h3>

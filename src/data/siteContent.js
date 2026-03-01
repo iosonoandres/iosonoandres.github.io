@@ -1,7 +1,7 @@
 export const siteContent = {
   identity: {
     name: 'Andres Camacho',
-    headline: 'Software Engineer in Prometeia | Data & AI Engineer',
+    headline: 'Software Engineer in Prometeia | Data & AI Engineer 📍',
     location: 'Bologna, Emilia Romagna, Italy',
     availability: 'Currently employed',
   },
