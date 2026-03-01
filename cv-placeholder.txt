@@ -1,0 +1,5 @@
+CV Placeholder - Andres Camacho
+
+Questo file e un placeholder temporaneo.
+Sostituiscilo con il tuo CV definitivo (PDF) mantenendo lo stesso percorso
+oppure aggiorna il link in src/data/siteContent.js
