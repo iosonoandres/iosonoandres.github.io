@@ -1,8 +1,9 @@
 export const siteContent = {
   identity: {
     name: 'Andres Camacho',
-    headline: 'Software Engineer in Prometeia | Data & AI Engineer | P2P in WAYouth ETS',
+    headline: 'Software Engineer in Prometeia | Data & AI Engineer',
     location: 'Bologna, Emilia Romagna, Italy',
+    availability: 'Currently employed',
   },
   links: {
     linkedin: 'https://www.linkedin.com/in/andres-camacho-881319188/',
@@ -13,7 +14,6 @@ export const siteContent = {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
     { id: 'education', label: 'Education' },
     { id: 'talks', label: 'Talks' },
     { id: 'skills', label: 'Skills' },
@@ -50,6 +50,11 @@ export const siteContent = {
           'Data-driven decisions, measurable outcomes, and continuous delivery improvement.',
       },
     ],
+    counters: [
+      { value: 2, suffix: '+', label: 'Enterprise roles' },
+      { value: 5, suffix: '+ years', label: 'Mentoring and community' },
+      { value: 8, suffix: ' sessions', label: 'Bootcamp teaching' },
+    ],
   },
   experience: [
     {
@@ -57,87 +62,16 @@ export const siteContent = {
       organization: 'Prometeia',
       period: 'Jul 2025 - Present',
       meta: 'Full-time | Bologna, Italy | Hybrid',
-      bullets: [
-        'Designed and delivered infrastructure solutions for Tier-1 Italian banks across Azure and on-premise environments.',
-        'Developed SQL Server architectures for risk and liquidity analytics, optimizing stored procedures and data pipelines.',
-        'Supported infrastructure reliability through monitoring dashboards, log analytics, and automated health checks.',
-        'Contributed to internal technical documentation and knowledge sharing across delivery teams.',
-      ],
-    },
-    {
-      role: 'Head of AI and Cybersecurity',
-      organization: 'Forza Italia Giovani',
-      period: 'Feb 2025 - Present',
-      meta: 'Full-time | Italy | On-site',
-      bullets: [
-        'Lead initiatives on artificial intelligence and cybersecurity topics within the organization.',
-        'Coordinate contributors and stakeholders to translate strategy into practical initiatives.',
-        'Promote responsible technology adoption through communication and awareness activities.',
-      ],
-    },
-    {
-      role: 'Peer Mentor',
-      organization: 'WAYouth ETS',
-      period: 'Apr 2021 - Present',
-      meta: 'Part-time | Italy',
-      bullets: [
-        'Mentor students and young professionals in challenge-based learning paths and events.',
-        'Support local, national, and international community initiatives with a collaborative approach.',
-        'Guide participants on communication, teamwork, and practical problem-solving.',
-      ],
-    },
-    {
-      role: 'Lecturer - Data and AI Bootcamp',
-      organization: 'Hertz Italia',
-      period: 'Sep 2025 - Dec 2025',
-      meta: 'Part-time | Bologna, Italy | Hybrid',
-      bullets: [
-        'Delivered hands-on lectures on data and AI focused on practical business automation.',
-        'Covered Azure fundamentals, Power Automate workflows, and Power BI reporting.',
-        'Guided participants in building complete data workflows from ingestion to visualization.',
-      ],
+      summary:
+        'Working on Enterprise Risk Management initiatives for Tier-1 Italian banks and international clients, with a focus on reliable infrastructure, database engineering, and end-to-end delivery quality.',
     },
     {
       role: 'Business Analytics Specialist',
       organization: 'ICONSULTING',
       period: 'Jul 2024 - Jun 2025',
       meta: 'Full-time | Bologna, Italy | Hybrid',
-      bullets: [
-        'Developed and maintained ETL pipelines and logistics data services in high-volume environments.',
-        'Built stored procedures and analytical assets for operational monitoring and business reporting.',
-        'Improved data quality, reliability, and performance across data workflows.',
-      ],
-    },
-    {
-      role: 'Web Manager and Developer',
-      organization: 'WAYouth ETS',
-      period: 'Jan 2023 - Dec 2023',
-      meta: 'Part-time | Italy',
-      bullets: [
-        'Managed WAYouth.it using WordPress, CSS, and JavaScript for a consistent digital presence.',
-        'Improved usability and accessibility across pages and navigation flows.',
-        'Supported communication campaigns with structured and timely content updates.',
-      ],
-    },
-  ],
-  projects: [
-    {
-      title: 'Enterprise Risk Engineering',
-      description:
-        'Delivery of software and data solutions in regulated banking environments with strong reliability requirements.',
-      status: 'Enterprise',
-    },
-    {
-      title: 'Data and AI Enablement',
-      description:
-        'Design of practical workflows that combine data engineering, analytics, and AI capabilities.',
-      status: 'Applied',
-    },
-    {
-      title: 'Automation and Analytics Workflows',
-      description:
-        'Implementation of operational automations and reporting pipelines to speed up decision-making.',
-      status: 'Delivered',
+      summary:
+        'Delivered analytics and data engineering solutions for logistics use cases, designing ETL flows and SQL-based reporting assets with strong attention to scalability, accuracy, and business value.',
     },
   ],
   education: {
@@ -145,28 +79,47 @@ export const siteContent = {
     degree: "Bachelor's Degree, Computer Science for Management",
     period: 'Sep 2021 - Dec 2024',
     description:
-      'Academic path focused on software engineering fundamentals, data systems, and practical problem-solving.',
-    highlights: [
-      'Strong foundations in software development, databases, and algorithmic thinking.',
-      'Applied coursework connecting analytics and technology to real business contexts.',
-      'Team-based projects with emphasis on communication and execution quality.',
-    ],
+      'Academic path focused on software engineering fundamentals, data systems, and practical problem-solving, with constant application to business-oriented scenarios.',
+    focus:
+      'Core focus areas included software development, database systems, analytics foundations, and collaborative project execution.',
   },
   talks: {
-    teaching: {
-      title: 'Lecturer for Data and AI Bootcamp (8 sessions)',
-      bullets: [
-        'Azure fundamentals for building cloud-ready data solutions.',
-        'Business automation patterns with Microsoft Power Automate.',
-        'Data visualization and storytelling best practices with Power BI.',
-      ],
-    },
-    leadership: {
-      title: 'Head of AI and Cybersecurity - Forza Italia Giovani',
-      period: 'Feb 2025 - Present',
-      description:
-        'Leadership role focused on AI and cybersecurity initiatives, awareness, and strategic collaboration.',
-    },
+    description:
+      'Parallel experiences in teaching, mentoring, and leadership focused on data, AI, and technology culture.',
+    entries: [
+      {
+        role: 'Lecturer - Data and AI Bootcamp',
+        organization: 'Hertz Italia',
+        period: 'Sep 2025 - Dec 2025',
+        meta: 'Part-time | Bologna, Italy | Hybrid',
+        description:
+          'Delivered an 8-session bootcamp on Azure fundamentals, workflow automation with Power Automate, and practical data visualization with Power BI.',
+      },
+      {
+        role: 'Peer Mentor',
+        organization: 'WAYouth ETS',
+        period: 'Apr 2021 - Present',
+        meta: 'Part-time | Italy',
+        description:
+          'Mentoring students and young professionals in challenge-based learning environments, supporting collaboration, communication, and problem-solving.',
+      },
+      {
+        role: 'Web Manager and Developer',
+        organization: 'WAYouth ETS',
+        period: 'Jan 2023 - Dec 2023',
+        meta: 'Part-time | Italy',
+        description:
+          'Managed the association website and supported digital communication initiatives, improving consistency and accessibility of the online presence.',
+      },
+      {
+        role: 'Head of AI and Cybersecurity',
+        organization: 'Forza Italia Giovani',
+        period: 'Feb 2025 - Present',
+        meta: 'Full-time | Italy | On-site',
+        description:
+          'Leading AI and cybersecurity initiatives, translating strategy into practical actions and fostering awareness on responsible technology adoption.',
+      },
+    ],
     certification: {
       title: 'Winner of the Future Education Digital Challenge',
       period: 'Issued Dec 2020',

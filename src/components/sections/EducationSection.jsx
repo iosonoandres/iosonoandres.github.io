@@ -14,11 +14,7 @@ const EducationSection = () => {
         <h3>{education.institution}</h3>
         <p>{education.degree}</p>
         <p className="timeline-date">{education.period}</p>
-        <ul>
-          {education.highlights.map((highlight) => (
-            <li key={highlight}>{highlight}</li>
-          ))}
-        </ul>
+        <p>{education.focus}</p>
       </GlowCard>
     </section>
   );

@@ -8,7 +8,7 @@ const ExperienceSection = () => (
     <SectionTitle
       eyebrow="Experience"
       title="Professional journey"
-      description="Experience across enterprise delivery, education, and mentorship with a data-driven approach."
+      description="Professional experience in enterprise software and data delivery across banking and analytics contexts."
     />
     <Timeline items={siteContent.experience} />
   </section>

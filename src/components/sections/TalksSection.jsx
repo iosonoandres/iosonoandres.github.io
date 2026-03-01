@@ -8,26 +8,21 @@ const TalksSection = () => (
     <SectionTitle
       eyebrow="Talks & Teaching"
       title="Teaching, leadership, and recognition"
-      description="Learning initiatives and leadership experiences focused on data, AI, and cybersecurity."
+      description={siteContent.talks.description}
     />
 
     <div className="talks-grid">
-      <GlowCard delay={0}>
-        <h3>{siteContent.talks.teaching.title}</h3>
-        <ul>
-          {siteContent.talks.teaching.bullets.map((bullet) => (
-            <li key={bullet}>{bullet}</li>
-          ))}
-        </ul>
-      </GlowCard>
+      {siteContent.talks.entries.map((entry, index) => (
+        <GlowCard key={`${entry.organization}-${entry.role}`} delay={index * 70}>
+          <p className="timeline-date">{entry.period}</p>
+          <h3>{entry.role}</h3>
+          <p className="timeline-org">{entry.organization}</p>
+          <p className="timeline-meta">{entry.meta}</p>
+          <p>{entry.description}</p>
+        </GlowCard>
+      ))}
 
-      <GlowCard delay={120}>
-        <p className="timeline-date">{siteContent.talks.leadership.period}</p>
-        <h3>{siteContent.talks.leadership.title}</h3>
-        <p>{siteContent.talks.leadership.description}</p>
-      </GlowCard>
-
-      <GlowCard delay={180}>
+      <GlowCard delay={300}>
         <p className="timeline-date">{siteContent.talks.certification.period}</p>
         <h3>{siteContent.talks.certification.title}</h3>
         <p>{siteContent.talks.certification.description}</p>

@@ -1,6 +1,7 @@
 import React from 'react';
 import GlowCard from '../custom/GlowCard';
 import SectionTitle from '../custom/SectionTitle';
+import AchievementCounters from '../custom/AchievementCounters';
 import { siteContent } from '../../data/siteContent';
 
 const AboutSection = () => (
@@ -15,6 +16,8 @@ const AboutSection = () => (
       <h3>Milestone</h3>
       <p>{siteContent.about.milestone}</p>
     </GlowCard>
+
+    <AchievementCounters items={siteContent.about.counters} />
 
     <div className="focus-grid">
       {siteContent.about.focusCards.map((card, index) => (
