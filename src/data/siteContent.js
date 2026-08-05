@@ -1,154 +1,168 @@
-export const siteContent = {
-  identity: {
-    name: 'Andres Camacho',
-    headline: 'Software Engineer in Prometeia | Data & AI Engineer 📍',
-    location: 'Bologna, Emilia Romagna, Italy',
-    availability: 'Currently employed',
-  },
+export const sharedContent = {
+  identity: { name: 'Andres Camacho', initials: 'AC' },
   links: {
     linkedin: 'https://www.linkedin.com/in/andres-camacho-881319188/',
     email: 'andrescamachojobs@outlook.it',
     cv: '/ENG_CV_Andres_2025.pdf',
   },
-  nav: [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'education', label: 'Education' },
-    { id: 'talks', label: 'Talks' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'contact', label: 'Contact' },
-  ],
-  about: {
-    bio: 'Software Engineer at Prometeia, currently working on Enterprise Risk Management projects for Tier-1 Italian banks and international clients. I started my career as a Data and AI Engineer, contributing to complex cross-functional teams and building solutions at the intersection of data engineering, analytics, and artificial intelligence. I bring an analytical and data-driven mindset, with a strong focus on results, continuous improvement, and high-quality collaboration.',
-    milestone:
-      'Key milestone: winner of the Future Education Digital Challenge at Expo Dubai 2020, representing the Italian Pavilion among more than 70 teams and 600 participants from 47 nationalities.',
-    focusCards: [
-      {
-        title: 'Enterprise Risk Delivery',
-        description:
-          'Engineering solutions for regulated financial environments and high-impact decisions.',
-      },
-      {
-        title: 'Data and AI Foundations',
-        description:
-          'Solid background in data engineering, analytics, and practical AI use cases.',
-      },
-      {
-        title: 'Cross-Functional Delivery',
-        description:
-          'Bridging business and technical teams to turn requirements into working outcomes.',
-      },
-      {
-        title: 'International Mindset',
-        description:
-          'International experiences that strengthen adaptability and a global perspective.',
-      },
-      {
-        title: 'Results and Improvement',
-        description:
-          'Data-driven decisions, measurable outcomes, and continuous delivery improvement.',
-      },
-    ],
-    counters: [
-      { value: 2, suffix: '+', label: 'Enterprise roles' },
-      { value: 5, suffix: '+ years', label: 'Mentoring and community' },
-      { value: 8, suffix: ' sessions', label: 'Bootcamp teaching' },
-    ],
-  },
-  experience: [
-    {
-      role: 'Software Engineer - Architect',
-      organization: 'Prometeia',
-      period: 'Jul 2025 - Present',
-      meta: 'Full-time | Bologna, Italy | Hybrid',
-      summary:
-        'Working on Enterprise Risk Management initiatives for Tier-1 Italian banks and international clients, with a focus on reliable infrastructure, database engineering, and end-to-end delivery quality.',
-    },
-    {
-      role: 'Business Analytics Specialist',
-      organization: 'ICONSULTING',
-      period: 'Jul 2024 - Jun 2025',
-      meta: 'Full-time | Bologna, Italy | Hybrid',
-      summary:
-        'Delivered analytics and data engineering solutions for logistics use cases, designing ETL flows and SQL-based reporting assets with strong attention to scalability, accuracy, and business value.',
-    },
-  ],
-  education: {
-    institution: 'Alma Mater Studiorum - University of Bologna',
-    degree: "Bachelor's Degree, Computer Science for Management",
-    period: 'Sep 2021 - Dec 2024',
-    description:
-      'Academic path focused on software engineering fundamentals, data systems, and practical problem-solving, with constant application to business-oriented scenarios.',
-    focus:
-      'Core focus areas included software development, database systems, analytics foundations, and collaborative project execution.',
-  },
-  talks: {
-    description:
-      'Parallel experiences in teaching, mentoring, and leadership focused on data, AI, and technology culture.',
-    entries: [
-      {
-        role: 'Lecturer - Data and AI Bootcamp',
-        organization: 'Hertz Italia',
-        period: 'Sep 2025 - Dec 2025',
-        meta: 'Part-time | Bologna, Italy | Hybrid',
-        description:
-          'Delivered an 8-session bootcamp on Azure fundamentals, workflow automation with Power Automate, and practical data visualization with Power BI.',
-      },
-      {
-        role: 'Peer Mentor',
-        organization: 'WAYouth ETS',
-        period: 'Apr 2021 - Present',
-        meta: 'Part-time | Italy',
-        description:
-          'Mentoring students and young professionals in challenge-based learning environments, supporting collaboration, communication, and problem-solving.',
-      },
-      {
-        role: 'Web Manager and Developer',
-        organization: 'WAYouth ETS',
-        period: 'Jan 2023 - Dec 2023',
-        meta: 'Part-time | Italy',
-        description:
-          'Managed the association website and supported digital communication initiatives, improving consistency and accessibility of the online presence.',
-      },
-      {
-        role: 'Head of AI and Cybersecurity',
-        organization: 'Forza Italia Giovani',
-        period: 'Feb 2025 - Present',
-        meta: 'Full-time | Italy | On-site',
-        description:
-          'Leading AI and cybersecurity initiatives, translating strategy into practical actions and fostering awareness on responsible technology adoption.',
-      },
-    ],
-    certification: {
-      title: 'Winner of the Future Education Digital Challenge',
-      period: 'Issued Dec 2020',
-      description:
-        "Awarded by the Italian Commissioner's Office of Expo Dubai 2020, representing the Italian Pavilion.",
-    },
-  },
   skills: [
-    'Enterprise Risk Management',
-    'Active Directory',
-    'Product Data Management',
-    'Linux',
-    'Database Management Systems (DBMS)',
-    'InfraOps',
-    'DevOps',
-    'JIRA',
-    'Project Management',
-    'Big Data',
-    'Python',
-    'Data Warehouse',
-    'Microsoft Power BI',
-    'Azure',
-    'ETL',
-    'Microsoft SQL Server',
-    'SQL',
-    'RAG',
-    'PostgreSQL',
-    'React',
-    'TypeScript',
-    'AI / Machine Learning',
+    { label: 'Cloud & Infrastructure', items: ['Azure', 'InfraOps', 'Linux', 'Active Directory', 'DevOps'] },
+    { label: 'Data Platforms', items: ['SQL Server', 'PostgreSQL', 'ETL', 'Data Warehouse', 'Power BI'] },
+    { label: 'Applied AI', items: ['Multi-agent systems', 'RAG', 'Local inference', 'Cloud inference', 'API cost observability'] },
+    { label: 'Engineering', items: ['Python', 'React', 'TypeScript', 'DBMS', 'System design'] },
+    { label: 'Delivery', items: ['Enterprise Risk Management', 'JIRA', 'Project Management', 'Technical training'] },
   ],
+};
+
+export const contentByLanguage = {
+  en: {
+    ui: {
+      menu: 'Menu', close: 'Close', light: 'Light theme', dark: 'Dark theme',
+      language: 'Switch to Italian', talk: "Let's talk", readMore: 'Explore journey',
+      gameHint: 'Something is hiding here', skipGame: 'Close game',
+    },
+    nav: [
+      { id: 'home', label: 'Home' }, { id: 'about', label: 'Profile' },
+      { id: 'experience', label: 'Experience' }, { id: 'leadership', label: 'Leadership' },
+      { id: 'education', label: 'Education' }, { id: 'skills', label: 'Capabilities' },
+      { id: 'contact', label: 'Contact' },
+    ],
+    hero: {
+      kicker: 'Bologna, Italy · Enterprise systems · Applied AI',
+      role: 'Software Engineer & Cloud Infrastructure Architect',
+      statement: 'I design resilient banking infrastructure and turn AI into governed, measurable systems.',
+      status: 'Currently employed', download: 'Download CV', contact: 'Start a conversation', scroll: 'Scroll to discover',
+    },
+    about: {
+      eyebrow: 'Profile', title: 'Engineering systems. Growing people. Opening markets.',
+      body: 'I work at the intersection of software engineering, cloud infrastructure, data and artificial intelligence. At Prometeia, I contribute to Enterprise Risk Management platforms for Tier-1 Italian banks and international clients, balancing architecture, reliability and business impact.',
+      bodyTwo: 'My background in data engineering shaped an analytical approach to delivery. I combine technical depth with clear communication, because robust systems and strong teams are built with the same ingredients: context, trust and continuous improvement.',
+      stats: [
+        { value: '10', label: 'people led in the national AI & Cybersecurity department' },
+        { value: '2', label: 'inference modes designed: local and cloud' },
+        { value: '1', label: 'new European market opened through a strategic French client' },
+      ],
+    },
+    experience: {
+      eyebrow: 'Professional journey', title: 'Infrastructure, data and delivery at enterprise scale.',
+      description: 'Two roles, one progression: from analytics foundations to the architecture of critical banking platforms.',
+      entries: [
+        {
+          role: 'Software Engineer · Cloud Infrastructure Architect', organization: 'Prometeia',
+          period: 'Jul 2025 — Present', meta: 'Bologna · Hybrid', marker: 'Current',
+          summary: 'Designing and delivering application infrastructure for liquidity and risk solutions used by Tier-1 banks and international clients. My scope spans Azure and on-premises environments, SQL Server architectures, reliability operations and technical enablement.',
+          highlights: [
+            'Led tailored Prometeia Academy sessions on banking application infrastructure and ETL tooling.',
+            'Contributed to winning a major French client, supporting the opening of a strategic new market.',
+            'Built a governed multi-agent orchestration framework for enterprise use cases, with local/cloud inference and API cost monitoring.',
+          ],
+          tags: ['Cloud architecture', 'Enterprise Risk', 'SQL Server', 'InfraOps'],
+        },
+        {
+          role: 'Business Analytics Specialist', organization: 'ICONSULTING',
+          period: 'Jul 2024 — Jun 2025', meta: 'Bologna · Hybrid',
+          summary: 'Developed analytics and data engineering solutions for logistics operations, working with high-volume datasets and translating operational requirements into dependable ETL flows, SQL assets and decision-ready reporting.',
+          highlights: ['Designed scalable ETL and data warehouse flows.', 'Connected technical delivery to measurable operational needs.'],
+          tags: ['ETL', 'Big Data', 'Python', 'Power BI'],
+        },
+      ],
+    },
+    leadership: {
+      eyebrow: 'Leadership & innovation', title: 'Technology becomes valuable when people can act on it.',
+      description: 'A focused view of the work I do beyond day-to-day engineering: leading, teaching and experimenting responsibly.',
+      cards: [
+        { index: '01', title: 'National Head of AI & Cybersecurity', organization: 'Forza Italia', period: 'Feb 2025 — Present', text: 'Leading a national team of 10 people in the development of legislative proposals on artificial intelligence and cybersecurity for the 2027 policy platform, connecting technical evidence with public-policy outcomes.', accent: 'blue' },
+        { index: '02', title: 'Prometeia Academy Lead', organization: 'Prometeia', period: '2026', text: 'Designed and delivered tailored lessons on cloud and application infrastructure for banking liquidity and risk platforms, including the role of ETL tooling across the delivery chain.', accent: 'cyan' },
+        { index: '03', title: 'Teaching & Mentorship', organization: 'Hertz Italia · WAYouth ETS', period: '2021 — Present', text: 'Delivered a Data & AI bootcamp covering automation and visualization, while mentoring young professionals through challenge-based learning and collaborative problem solving.', accent: 'lime' },
+      ],
+      innovation: {
+        label: 'Applied AI · Enterprise case study',
+        title: 'Multi-agent orchestration, built for control.',
+        text: 'A custom framework built with open-source agent solutions including OpenClaw and Hermes. It routes inference between local and cloud environments, orchestrates specialized agents and adds API cost observability, policy controls and compliance-aware execution for enterprise use cases.',
+        tags: ['Multi-agent orchestration', 'Hybrid inference', 'Cost governance', 'Compliance'],
+        imageAlt: 'Functional overview of the OpenClaw enterprise orchestration framework',
+      },
+      recognition: { label: 'Recognition · Expo 2020 Dubai', title: 'Future Education Digital Challenge winner', text: 'Represented the Italian Pavilion in an international innovation challenge involving more than 70 teams and 600 participants, strengthening my approach to collaboration across disciplines and cultures.', imageAlt: 'Italian Pavilion at Expo 2020 Dubai' },
+    },
+    education: { eyebrow: 'Education', title: 'Computer science, grounded in business.', institution: 'Alma Mater Studiorum · University of Bologna', degree: "Bachelor's Degree in Computer Science for Management", period: 'Sep 2021 — Dec 2024', text: 'A multidisciplinary foundation spanning software engineering, database systems, analytics and the organizational context in which technology creates value.' },
+    skills: { eyebrow: 'Capabilities', title: 'A stack built around dependable outcomes.', description: 'From infrastructure to interfaces, I select technology according to the operating context rather than trends.' },
+    contact: { eyebrow: 'Contact', title: 'Complex problem? Let’s make it clear.', text: 'I am always open to thoughtful conversations about software architecture, applied AI, data platforms and technical education.', email: 'Write an email', linkedin: 'Connect on LinkedIn' },
+    footer: 'Designed and engineered in Bologna.',
+    game: { title: 'OpenClaw: Cloud Run', intro: 'Clear three infrastructure zones, defeat rogue agents and combine six power-ups before the final production gate.', start: 'Start run', resume: 'Resume', close: 'Exit', retry: 'Run again', win: 'Deployment complete', winText: 'OpenClaw reached production. Clean routing, controlled costs, no incidents.', gameOver: 'Pipeline interrupted', gameOverText: 'The rogue agents stopped this deployment. Restart from development.', controls: 'Move with A/D or arrows. Jump with W, ↑ or Space. Stomp enemies from above.', tokens: 'tokens', lives: 'lives', power: 'power', soundOn: 'Sound on', soundOff: 'Sound off', mobileLeft: 'Move left', mobileRight: 'Move right', mobileJump: 'Jump' },
+  },
+  it: {
+    ui: {
+      menu: 'Menu', close: 'Chiudi', light: 'Tema chiaro', dark: 'Tema scuro',
+      language: "Passa all'inglese", talk: 'Parliamone', readMore: 'Scopri il percorso',
+      gameHint: 'Qui si nasconde qualcosa', skipGame: 'Chiudi il gioco',
+    },
+    nav: [
+      { id: 'home', label: 'Home' }, { id: 'about', label: 'Profilo' },
+      { id: 'experience', label: 'Esperienza' }, { id: 'leadership', label: 'Leadership' },
+      { id: 'education', label: 'Formazione' }, { id: 'skills', label: 'Competenze' },
+      { id: 'contact', label: 'Contatti' },
+    ],
+    hero: {
+      kicker: 'Bologna, Italia · Sistemi enterprise · AI applicata',
+      role: 'Software Engineer & Cloud Infrastructure Architect',
+      statement: "Progetto infrastrutture bancarie resilienti e trasformo l'AI in sistemi governati e misurabili.",
+      status: 'Attualmente impiegato', download: 'Scarica il CV', contact: 'Iniziamo una conversazione', scroll: 'Scorri per scoprire',
+    },
+    about: {
+      eyebrow: 'Profilo', title: 'Progettare sistemi. Far crescere persone. Aprire mercati.',
+      body: "Lavoro all'incrocio tra software engineering, infrastrutture cloud, dati e intelligenza artificiale. In Prometeia contribuisco a piattaforme di Enterprise Risk Management per banche italiane Tier-1 e clienti internazionali, bilanciando architettura, affidabilità e impatto sul business.",
+      bodyTwo: "Il mio percorso nella data engineering ha formato un approccio analitico alla delivery. Unisco profondità tecnica e comunicazione chiara, perché sistemi robusti e team forti si costruiscono con gli stessi ingredienti: contesto, fiducia e miglioramento continuo.",
+      stats: [
+        { value: '10', label: 'persone guidate nel dipartimento nazionale AI & Cybersecurity' },
+        { value: '2', label: 'modalità di inferenza progettate: locale e cloud' },
+        { value: '1', label: 'nuovo mercato europeo aperto tramite un cliente strategico francese' },
+      ],
+    },
+    experience: {
+      eyebrow: 'Percorso professionale', title: 'Infrastrutture, dati e delivery su scala enterprise.',
+      description: "Due ruoli, un'unica evoluzione: dalle fondamenta analytics all'architettura di piattaforme bancarie critiche.",
+      entries: [
+        {
+          role: 'Software Engineer · Cloud Infrastructure Architect', organization: 'Prometeia',
+          period: 'Lug 2025 — Oggi', meta: 'Bologna · Ibrido', marker: 'Attuale',
+          summary: 'Progetto e realizzo infrastrutture applicative per soluzioni di liquidità e rischio utilizzate da banche Tier-1 e clienti internazionali. Il mio perimetro comprende ambienti Azure e on-premise, architetture SQL Server, reliability operations e formazione tecnica.',
+          highlights: [
+            "Ho guidato lezioni personalizzate della Prometeia Academy su infrastrutture bancarie e strumenti ETL.",
+            "Ho contribuito all'acquisizione di un importante cliente francese, supportando l'apertura di un nuovo mercato strategico.",
+            'Ho sviluppato un framework multi-agentico governato per use case aziendali, con inferenza locale/cloud e monitoraggio dei costi API.',
+          ],
+          tags: ['Cloud architecture', 'Enterprise Risk', 'SQL Server', 'InfraOps'],
+        },
+        {
+          role: 'Business Analytics Specialist', organization: 'ICONSULTING',
+          period: 'Lug 2024 — Giu 2025', meta: 'Bologna · Ibrido',
+          summary: 'Ho sviluppato soluzioni analytics e data engineering per operazioni logistiche, lavorando su dataset ad alto volume e traducendo requisiti operativi in flussi ETL affidabili, asset SQL e reportistica pronta per le decisioni.',
+          highlights: ['Progettazione di flussi ETL e data warehouse scalabili.', 'Connessione tra delivery tecnica ed esigenze operative misurabili.'],
+          tags: ['ETL', 'Big Data', 'Python', 'Power BI'],
+        },
+      ],
+    },
+    leadership: {
+      eyebrow: 'Leadership & innovazione', title: 'La tecnologia crea valore quando le persone possono usarla.',
+      description: "Una vista mirata sul lavoro oltre l'engineering quotidiano: guidare, insegnare e sperimentare con responsabilità.",
+      cards: [
+        { index: '01', title: 'Responsabile nazionale AI & Cybersecurity', organization: 'Forza Italia', period: 'Feb 2025 — Oggi', text: 'Guido un team nazionale di 10 persone nella scrittura di proposte legislative su intelligenza artificiale e cybersecurity per il programma politico 2027, collegando evidenze tecniche e risultati di policy pubblica.', accent: 'blue' },
+        { index: '02', title: 'Guida Prometeia Academy', organization: 'Prometeia', period: '2026', text: 'Ho progettato e tenuto lezioni personalizzate sulle infrastrutture cloud e applicative per piattaforme bancarie di liquidità e rischio, includendo il ruolo degli strumenti ETL nella catena di delivery.', accent: 'cyan' },
+        { index: '03', title: 'Teaching & mentorship', organization: 'Hertz Italia · WAYouth ETS', period: '2021 — Oggi', text: 'Ho tenuto un bootcamp Data & AI su automazione e visualizzazione e continuo a supportare giovani professionisti tramite challenge-based learning e problem solving collaborativo.', accent: 'lime' },
+      ],
+      innovation: {
+        label: 'AI applicata · Case study enterprise',
+        title: 'Orchestrazione multi-agentica, progettata per il controllo.',
+        text: 'Un framework custom sviluppato con soluzioni agentiche open source, tra cui OpenClaw e Hermes. Instrada l’inferenza tra ambienti locali e cloud, orchestra agenti specializzati e integra osservabilità dei costi API, policy e processi compliance-aware per use case aziendali.',
+        tags: ['Orchestrazione multi-agentica', 'Inferenza ibrida', 'Cost governance', 'Compliance'],
+        imageAlt: 'Panoramica funzionale del framework enterprise OpenClaw',
+      },
+      recognition: { label: 'Riconoscimento · Expo 2020 Dubai', title: 'Vincitore della Future Education Digital Challenge', text: 'Ho rappresentato il Padiglione Italia in una challenge internazionale di innovazione con oltre 70 team e 600 partecipanti, consolidando un approccio alla collaborazione tra discipline e culture diverse.', imageAlt: 'Padiglione Italia a Expo 2020 Dubai' },
+    },
+    education: { eyebrow: 'Formazione', title: "Informatica, con lo sguardo sull'impresa.", institution: 'Alma Mater Studiorum · Università di Bologna', degree: 'Laurea in Informatica per il Management', period: 'Set 2021 — Dic 2024', text: 'Una base multidisciplinare tra software engineering, sistemi di database, analytics e il contesto organizzativo in cui la tecnologia produce valore.' },
+    skills: { eyebrow: 'Competenze', title: 'Uno stack costruito intorno a risultati affidabili.', description: 'Dalle infrastrutture alle interfacce, scelgo la tecnologia in base al contesto operativo, non alle mode.' },
+    contact: { eyebrow: 'Contatti', title: 'Problema complesso? Rendiamolo chiaro.', text: 'Sono sempre disponibile per conversazioni ragionate su software architecture, AI applicata, piattaforme dati e formazione tecnica.', email: "Scrivimi un'email", linkedin: 'Connettiamoci su LinkedIn' },
+    footer: 'Progettato e sviluppato a Bologna.',
+    game: { title: 'OpenClaw: Cloud Run', intro: 'Supera tre zone infrastrutturali, sconfiggi gli agenti fuori controllo e combina sei power-up prima del gate finale di produzione.', start: 'Avvia', resume: 'Riprendi', close: 'Esci', retry: 'Nuova partita', win: 'Deploy completato', winText: 'OpenClaw ha raggiunto la produzione: routing pulito, costi sotto controllo, nessun incidente.', gameOver: 'Pipeline interrotta', gameOverText: 'Gli agenti fuori controllo hanno fermato il deploy. Riparti dallo sviluppo.', controls: 'Muoviti con A/D o le frecce. Salta con W, ↑ o Spazio. Elimina i nemici saltandoci sopra.', tokens: 'token', lives: 'vite', power: 'power-up', soundOn: 'Audio attivo', soundOff: 'Audio disattivato', mobileLeft: 'Vai a sinistra', mobileRight: 'Vai a destra', mobileJump: 'Salta' },
+  },
 };

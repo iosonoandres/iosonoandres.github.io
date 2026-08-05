@@ -1,98 +1,50 @@
-import React, { useState } from 'react';
 import AnimatedBackground from '../custom/AnimatedBackground';
-import NeonButton from '../custom/NeonButton';
-import MagneticLink from '../custom/MagneticLink';
-import useParallax from '../../hooks/useParallax';
-import usePrefersReducedMotion from '../../hooks/usePrefersReducedMotion';
-import { siteContent } from '../../data/siteContent';
-import heroPortrait from '../../assets/IMG_6417-Photoroom.png';
+import { usePreferences } from '../../context/PreferencesContext';
+import heroPortrait from '../../assets/portfolio/andres-portrait.jpg';
+
+const ArrowIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+);
 
 const HeroSection = () => {
-  const { identity, links } = siteContent;
-  const parallax = useParallax(24);
-  const prefersReducedMotion = usePrefersReducedMotion();
-  const [spotlight, setSpotlight] = useState({ x: 68, y: 33 });
-
-  const heroStyle = prefersReducedMotion
-    ? undefined
-    : {
-        transform: `translate3d(${parallax.x * 0.22}px, ${parallax.y * 0.12}px, 0)`,
-      };
-  const portraitStyle = prefersReducedMotion
-    ? undefined
-    : {
-        transform: `translate3d(${parallax.x * -0.14}px, ${parallax.y * -0.08}px, 0)`,
-      };
-
-  const spotlightStyle = prefersReducedMotion
-    ? undefined
-    : {
-        '--spotlight-x': `${spotlight.x}%`,
-        '--spotlight-y': `${spotlight.y}%`,
-      };
-
-  const onHeroPointerMove = (event) => {
-    if (prefersReducedMotion) {
-      return;
-    }
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    setSpotlight({
-      x: Math.max(12, Math.min(88, x)),
-      y: Math.max(16, Math.min(84, y)),
-    });
-  };
-
-  const resetSpotlight = () => {
-    if (prefersReducedMotion) {
-      return;
-    }
-    setSpotlight({ x: 68, y: 33 });
-  };
+  const { content, shared } = usePreferences();
 
   return (
-    <section
-      id="home"
-      className="hero-section section-anchor"
-      aria-label="Hero"
-      style={spotlightStyle}
-      onPointerMove={onHeroPointerMove}
-      onPointerLeave={resetSpotlight}
-    >
+    <section id="home" className="hero-section section-anchor" aria-labelledby="hero-title">
       <AnimatedBackground />
-      <div className="hero-inner">
-        <div className="hero-content" style={heroStyle}>
-          <p className="hero-kicker">{identity.location}</p>
-          <h1>{identity.name}</h1>
-          <p className="hero-headline">{identity.headline}</p>
-          <p className="availability-chip">
-            <span className="availability-dot" />
-            {identity.availability}
-          </p>
-
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <p className="hero-kicker"><span />{content.hero.kicker}</p>
+          <h1 id="hero-title">
+            <span>Andres</span>
+            <span className="hero-name-accent">Camacho</span>
+          </h1>
+          <p className="hero-role">{content.hero.role}</p>
+          <p className="hero-statement">{content.hero.statement}</p>
+          <div className="hero-status"><i />{content.hero.status}</div>
           <div className="hero-actions">
-            <NeonButton href={links.cv} download variant="primary" aria-label="Download CV">
-              Download CV
-            </NeonButton>
-            <NeonButton href="#contact" variant="ghost" aria-label="Go to contact section">
-              Contact me
-            </NeonButton>
-          </div>
-
-          <div className="hero-links">
-            <MagneticLink href={links.linkedin} target="_blank" rel="noopener noreferrer">
-              LinkedIn
-            </MagneticLink>
+            <a className="action-button action-primary" href={shared.links.cv} download>
+              {content.hero.download}<ArrowIcon />
+            </a>
+            <a className="action-button action-secondary" href="#contact">
+              {content.hero.contact}
+            </a>
           </div>
         </div>
 
-        <div className="hero-visual-stage" style={portraitStyle} aria-hidden="true">
-          <div className="hero-portrait">
-            <img src={heroPortrait} alt="" loading="eager" />
+        <div className="portrait-stage">
+          <div className="portrait-orbit orbit-one" />
+          <div className="portrait-orbit orbit-two" />
+          <div className="portrait-card">
+            <span className="portrait-index">01 / PORTFOLIO</span>
+            <img src={heroPortrait} alt="Andres Camacho" loading="eager" />
+            <span className="portrait-caption">ARCHITECTURE × AI</span>
           </div>
+          <span className="floating-code code-a">LOCAL / CLOUD</span>
+          <span className="floating-code code-b">BUILD · TEACH · LEAD</span>
         </div>
       </div>
+      <a className="scroll-cue" href="#about"><span>{content.hero.scroll}</span><i /></a>
     </section>
   );
 };

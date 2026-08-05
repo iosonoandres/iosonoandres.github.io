@@ -1,29 +1,21 @@
-import React from 'react';
-import NeonButton from '../custom/NeonButton';
 import SectionTitle from '../custom/SectionTitle';
-import { siteContent } from '../../data/siteContent';
+import { usePreferences } from '../../context/PreferencesContext';
 
-const ContactSection = () => (
-  <section id="contact" className="content-section section-anchor" aria-label="Contact">
-    <SectionTitle
-      eyebrow="Contact"
-      title="Let's build something valuable 📈"
-      description="Open to conversations about software engineering, data platforms, AI initiatives, and enterprise delivery."
-    />
+const ContactSection = () => {
+  const { content, shared } = usePreferences();
+  const { contact } = content;
 
-    <div className="contact-box">
-      <a href={`mailto:${siteContent.links.email}`} className="contact-link">
-        {siteContent.links.email}
-      </a>
-      <a href={siteContent.links.linkedin} className="contact-link" target="_blank" rel="noopener noreferrer">
-        linkedin.com/in/andres-camacho-881319188/
-      </a>
-
-      <NeonButton href={`mailto:${siteContent.links.email}`} variant="primary" aria-label="Send email">
-        Let's talk
-      </NeonButton>
-    </div>
-  </section>
-);
+  return (
+    <section id="contact" className="content-section contact-section section-anchor">
+      <div className="contact-glow" aria-hidden="true" />
+      <SectionTitle eyebrow={contact.eyebrow} title={contact.title} description={contact.text} />
+      <div className="contact-actions">
+        <a className="contact-main" href={`mailto:${shared.links.email}`}>{contact.email}<span>↗</span></a>
+        <a className="contact-secondary" href={shared.links.linkedin} target="_blank" rel="noopener noreferrer">{contact.linkedin}<span>↗</span></a>
+      </div>
+      <a className="contact-email" href={`mailto:${shared.links.email}`}>{shared.links.email}</a>
+    </section>
+  );
+};
 
 export default ContactSection;

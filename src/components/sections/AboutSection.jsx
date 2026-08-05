@@ -1,33 +1,29 @@
-import React from 'react';
-import GlowCard from '../custom/GlowCard';
 import SectionTitle from '../custom/SectionTitle';
-import AchievementCounters from '../custom/AchievementCounters';
-import { siteContent } from '../../data/siteContent';
+import { usePreferences } from '../../context/PreferencesContext';
 
-const AboutSection = () => (
-  <section id="about" className="content-section section-anchor" aria-label="About">
-    <SectionTitle
-      eyebrow="About"
-      title="Software Engineer with a Data and AI background 💻"
-      description={siteContent.about.bio}
-    />
+const AboutSection = () => {
+  const { content } = usePreferences();
+  const { about } = content;
 
-    <GlowCard className="about-milestone" delay={40}>
-      <h3>Milestone</h3>
-      <p>{siteContent.about.milestone}</p>
-    </GlowCard>
-
-    <AchievementCounters items={siteContent.about.counters} />
-
-    <div className="focus-grid">
-      {siteContent.about.focusCards.map((card, index) => (
-        <GlowCard key={card.title} delay={80 + index * 70}>
-          <h3>{card.title}</h3>
-          <p>{card.description}</p>
-        </GlowCard>
-      ))}
-    </div>
-  </section>
-);
+  return (
+    <section id="about" className="content-section about-section section-anchor">
+      <SectionTitle eyebrow={about.eyebrow} title={about.title} />
+      <div className="about-layout">
+        <div className="about-copy reveal-card is-visible">
+          <p>{about.body}</p>
+          <p>{about.bodyTwo}</p>
+        </div>
+        <div className="stats-stack">
+          {about.stats.map((stat, index) => (
+            <article className="stat-card" key={stat.label} style={{ '--delay': `${index * 90}ms` }}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default AboutSection;

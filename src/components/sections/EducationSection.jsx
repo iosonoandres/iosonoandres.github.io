@@ -1,21 +1,22 @@
-import React from 'react';
-import GlowCard from '../custom/GlowCard';
 import SectionTitle from '../custom/SectionTitle';
-import { siteContent } from '../../data/siteContent';
+import { usePreferences } from '../../context/PreferencesContext';
 
 const EducationSection = () => {
-  const { education } = siteContent;
+  const { content } = usePreferences();
+  const { education } = content;
 
   return (
-    <section id="education" className="content-section section-anchor" aria-label="Education">
-      <SectionTitle eyebrow="Education" title="Academic background 👨🏼‍🎓" description={education.description} />
-
-      <GlowCard className="education-card">
-        <h3>{education.institution}</h3>
-        <p>{education.degree}</p>
-        <p className="timeline-date">{education.period}</p>
-        <p>{education.focus}</p>
-      </GlowCard>
+    <section id="education" className="content-section education-section section-anchor">
+      <SectionTitle eyebrow={education.eyebrow} title={education.title} />
+      <article className="education-panel">
+        <div className="education-year">1088</div>
+        <div>
+          <p className="education-period">{education.period}</p>
+          <h3>{education.institution}</h3>
+          <h4>{education.degree}</h4>
+          <p>{education.text}</p>
+        </div>
+      </article>
     </section>
   );
 };

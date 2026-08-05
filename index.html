@@ -2,29 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/nuovaimmaginelink.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/brand-mark.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Andres Camacho</title>
+    <meta name="theme-color" content="#0d1725" />
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('ac-theme-v2') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <title>Andres Camacho · Software Engineer & Cloud Architect</title>
     <meta
       name="description"
-      content="Software Engineer in Prometeia | Data & AI Engineer. Portfolio, experience, education, and contact."
+      content="Software Engineer and Cloud Infrastructure Architect at Prometeia. Enterprise systems, applied AI, data platforms and technical leadership."
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Andres Camacho | Software Engineer" />
     <meta
       property="og:description"
-      content="Software Engineer in Prometeia | Data & AI Engineer. Portfolio, experience, education, and contact."
+      content="Software Engineer and Cloud Infrastructure Architect. Enterprise systems, applied AI and technical leadership."
     />
     <meta property="og:url" content="https://iosonoandres.github.io/" />
-    <meta property="og:image" content="https://iosonoandres.github.io/nuovaimmaginelink.png" />
-    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image" content="https://iosonoandres.github.io/social-preview.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Andres Camacho | Software Engineer" />
     <meta
       name="twitter:description"
-      content="Software Engineer in Prometeia | Data & AI Engineer. Portfolio, experience, education, and contact."
+      content="Software Engineer and Cloud Infrastructure Architect. Enterprise systems, applied AI and technical leadership."
     />
-    <meta name="twitter:image" content="https://iosonoandres.github.io/nuovaimmaginelink.png" />
+    <meta name="twitter:image" content="https://iosonoandres.github.io/social-preview.jpg" />
   </head>
   <body>
     <div id="root"></div>
