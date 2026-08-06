@@ -8,7 +8,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run test:game && vite build",
+    "test:game": "node scripts/validate-game-level.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
